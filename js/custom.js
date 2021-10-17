@@ -1,12 +1,3 @@
-/*-----------------------------------------------------------
-* Template Name    : Kerri | Responsive Bootstrap 4 Personal Template
-* Author           : SRBThemes
-* Version          : 1.0.0
-* Created          : March 2018
-* File Description : Main Js file of the template
-*------------------------------------------------------------
-*/
-
 ! function($) {
     "use strict";
 
