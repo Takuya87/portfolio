@@ -1,10 +1,10 @@
 ! function($) {
     "use strict";
 
-    var KerriApp = function() {};
+    var App = function() {};
 
     //scroll
-    KerriApp.prototype.initStickyMenu = function() {
+    App.prototype.initStickyMenu = function() {
         $(window).on('scroll',function() {
             var scroll = $(window).scrollTop();
 
@@ -17,7 +17,7 @@
     },
 
     // CollapseHide
-    KerriApp.prototype.initCollapseHide = function() {
+    App.prototype.initCollapseHide = function() {
         $(document).on('click', '.navbar-collapse.show', function(e) {
             if ($(e.target).is('a')) {
                 $(this).collapse('hide');
@@ -26,7 +26,7 @@
     },
 
     //Smooth
-    KerriApp.prototype.initSmoothLink = function() {
+    App.prototype.initSmoothLink = function() {
         $('.navbar-nav a, .scroll_down a').on('click', function(event) {
             var $anchor = $(this);
             $('html, body').stop().animate({
@@ -37,14 +37,14 @@
     },
 
     //Scrollspy
-    KerriApp.prototype.initScrollspy = function() {
+    App.prototype.initScrollspy = function() {
         $("#navbarCollapse").scrollspy({
             offset:20
         });
     },
 
     //Typed
-    KerriApp.prototype.initTextType = function() {
+    App.prototype.initTextType = function() {
         $(".element").each(function() {
             var $this = $(this);
             $this.typed({
@@ -56,7 +56,7 @@
     },
 
     //Work
-    KerriApp.prototype.initWork = function() {
+    App.prototype.initWork = function() {
         $(window).on('load', function () {
             var $container = $('.work-filter');
             var $filter = $('#menu-filter');
@@ -87,7 +87,7 @@
     },
 
     //Magnificpop
-    KerriApp.prototype.initMagnificPopup = function() {
+    App.prototype.initMagnificPopup = function() {
         $('.img-zoom').magnificPopup({
             type: 'image',
             closeOnContentClick: true,
@@ -101,7 +101,7 @@
     },
 
     //Client
-    KerriApp.prototype.initTestimonial = function() {
+    App.prototype.initTestimonial = function() {
         $("#owl-demo").owlCarousel({
             autoPlay: 7000,
             stopOnHover: true,
@@ -114,7 +114,7 @@
     },
 
     //PRELOADER
-    KerriApp.prototype.initPreloader = function() {
+    App.prototype.initPreloader = function() {
         $('#status').fadeOut();
         $('#preloader').delay(350).fadeOut('slow');
         $('body').delay(350).css({
@@ -123,7 +123,7 @@
     },
 
     // BACK TO TOP
-    KerriApp.prototype.initBackToTop = function() {
+    App.prototype.initBackToTop = function() {
         $(window).on('scroll',function(){
             if ($(this).scrollTop() > 100) {
                 $('.back_top').fadeIn();
@@ -138,7 +138,7 @@
     },
 
     // wavify Js
-    KerriApp.prototype.initWave = function(){
+    App.prototype.initWave = function(){
         if($('#wave_img').length) {
             $('#wave_img').wavify({
                 height: 100,
@@ -150,7 +150,7 @@
         }
     }
 
-    KerriApp.prototype.init = function() {
+    App.prototype.init = function() {
         this.initStickyMenu();
         this.initSmoothLink();
         this.initCollapseHide();
@@ -164,11 +164,11 @@
         this.initWave();
     },
     //init
-    $.KerriApp = new KerriApp, $.KerriApp.Constructor = KerriApp
+    $.App = new App, $.App.Constructor = App
 }(window.jQuery),
 
 //initializing
 function($) {
     "use strict";
-    $.KerriApp.init();
+    $.App.init();
 }(window.jQuery);
