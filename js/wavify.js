@@ -1,8 +1,3 @@
-/*
-*   Wavify
-*   JavaScript library to make some nice waves
-*   by peacepostman @ crezeo
- */
 
 function wavify(wave_element, options) {
   if ("undefined" === typeof options) options = {};
