@@ -1,9 +1,4 @@
-/*!
- * Name    : Just Another Parallax [Jarallax]
- * Version : 1.8.0
- * Author  : _nK https://nkdev.info
- * GitHub  : https://github.com/nk-o/jarallax
- */
+
 (function (window) {
     'use strict';
 
